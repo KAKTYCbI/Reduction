@@ -5,20 +5,20 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
  <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/home.css"/>" />
-<h1>Главная</h1>
+<h1>Статистика</h1>
 </br>
- <div class="reviews">
+ <div class="borders">
    <c:forEach items="${links}" var="links" >
-      <div class = "review">
-         <div class = "reviewtop"></div>
-            <div class = "reviewcenter">
+      <div class = "border">
+         <div class = "top"></div>
+            <div class = "center">
             <ul>
              <a href="${links.nameLink }">reduction/${links.nameLink }</a>&nbsp;
-             Имя пользавателя: ${links.user.name}&nbsp;
+             Имя пользователя: ${links.user.name}&nbsp;
              Кликнули:${links.count}
              </ul>
             </div>
-          <div class = "reviewbottom"></div>
+          <div class = "bottom"></div>
           </div>
     </c:forEach>
   </div>

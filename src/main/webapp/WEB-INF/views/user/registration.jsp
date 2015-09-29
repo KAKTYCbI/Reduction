@@ -6,7 +6,7 @@
  <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/home.css"/>" />
 
  <div class="login">
-<h3>Пожалуйсто зарегистрируйтесь</h3>
+<h3>Пожалуйста зарегистрируйтесь</h3>
 <form:form method = "post" action = "registration" commandName = "user">
     <table>
       <tr>

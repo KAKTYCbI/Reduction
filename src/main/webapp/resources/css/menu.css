@@ -10,31 +10,31 @@ color:#00a5e4;
 margin-left:50px;
 }
 
-.verch{
+.topmenu{
 background-image:url(../img/vmenutop.png);
 height:33px;
 background-repeat:no-repeat;
 }
+.centermenu ul{
+margin-left:20px;
+}
+.centermenu li  {
+list-style:none;
+}
 
-.center{
+.centermenu{
 background-image:url(../img/vmenucenter.png);
 background-repeat:repeat-y;
 }
 
-.niz{
+.bottommenu{
 height:23px;
 background-image:url(../img/vmenubuttom.png);
 background-repeat:no-repeat;
 }
-.center ul{
-margin-left:20px;
-}
-.center li  {
 
-list-style:none;
-}
 
-.center a{
+.centermenu a{
 
 color:#00a5e4;
 }

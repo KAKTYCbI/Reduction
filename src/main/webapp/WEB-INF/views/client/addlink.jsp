@@ -5,18 +5,19 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
  <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/home.css"/>" />
-<h1>Главная</h1>
+<h1>Добавление ссылки</h1>
 </br>
- <div class="reviews">
-    <div class = "review">
-         <div class = "reviewtop"></div>
-            <div class = "reviewcenter">
-
+<ul>
+ <div class="borders">
+    <div class = "border">
+         <div class = "top"></div>
+            <div class = "center">
+<ul>
             <form:form method = "post" action = "addlink" commandName = "link">
     <table>
       <tr>
         <td>
-          <form:label path = "domain">Имя вашего сайта:</form:label>
+          <form:label path = "domain">URL вашего сайта:</form:label>
         </td>
         <td>
           <form:input path="domain"/>
@@ -25,13 +26,13 @@
       </tr>
      
       <tr>
-        <td colspan="2"><input type="SUBMIT" value="Дабавить ссылку"></td>
+        <td colspan="2"><input type="SUBMIT" value="Добавить ссылку"></td>
       </tr>
     </table>
   </form:form>
-            
+              </ul>
             </div>
-          <div class = "reviewbottom"></div>
+          <div class = "bottom"></div>
     </div>
 
   </div>

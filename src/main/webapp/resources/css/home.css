@@ -1,42 +1,31 @@
-.reviews{
+.borders{
 	width: 595px;
     margin-left: 10px;
     margin-right: 20px;
 }
-.review{
+.border{
 
 margin-left:10px;
 margin-right:20px;
 width:595px;
 position:relative;
 }
-.reviewtop{
+.top{
 background-image:url(../img/reviewtop.png);
 height:12px;
 background-repeat:no-repeat;
 }
-.reviewcenter{
+.center{
 
 background-image:url(../img/reviewcenter.png);
 background-repeat:repeat-y;
 }
 
-.reviewcenter ul{
+.center ul{
 	margin-left:15px;
 }
 
-.rating{
- width:35px;
- height:34px;
- background-image:url(../img/rating.png);
- float:right;
- margin-right:40px;
-}
-.rating ul{
-	margin-left:40px;
-	margin-top:7px;
-}
-.reviewbottom{
+.bottom{
 
 background-image:url(../img/reviewbottom.png);
 height:14px;

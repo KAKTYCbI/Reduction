@@ -12,12 +12,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import com.instinctools.domain.service.LinkService;
 import com.instinctools.domain.service.UserService;
 import com.instinctools.model.Link;
 import com.instinctools.model.UserPrincipal;
-import com.instinctools.model.UserRole;
 
 
 @Controller
@@ -30,8 +28,11 @@ public class LinkController {
 	@Autowired
 	private UserService userService;
 	
+	@PreAuthorize("isFullyAuthenticated()")
 	@RequestMapping(value = { "/addlink" }, method = { RequestMethod.GET })
-	public String addLink(Model model) {
+	public String addLink(Model model,  Authentication auth) {
+		UserPrincipal user = userService.getUserByName(auth.getName());
+		model.addAttribute("user", user);
 		model.addAttribute("link", new Link());
 		return "addlink";
 	}
