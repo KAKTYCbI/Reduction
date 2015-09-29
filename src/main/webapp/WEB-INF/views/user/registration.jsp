@@ -29,7 +29,7 @@
       </tr>
       <tr>
         <td>
-          <form:label path = "password">Пороль:</form:label>
+          <form:label path = "password">Пароль:</form:label>
         </td>
         <td>
           <form:input path="password"/>

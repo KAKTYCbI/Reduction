@@ -17,24 +17,24 @@
 		<put-attribute name="body" value="/WEB-INF/views/user/login.jsp" />
 	</definition>
 	<definition name="registration" extends="base.definition">
-		<put-attribute name="title" value="ServiceStation - Sign Out" />
+		<put-attribute name="title" value="Reduction - Sign Out" />
 		<put-attribute name="body" value="/WEB-INF/views/user/registration.jsp" />
 	</definition>
 	
 	<definition name="addlink" extends="base.definition">
-		<put-attribute name="title" value="ServiceStation - Sign Out" />
+		<put-attribute name="title" value="Reduction - addlink" />
 		<put-attribute name="body" value="/WEB-INF/views/client/addlink.jsp" />
 		<put-attribute name="menu" value="/WEB-INF/tiles-base/menu.jsp" />
 	</definition>
 	
 	<definition name="guesthome" extends="base.definition">
-		<put-attribute name="title" value="ServiceStation - Sign Out" />
+		<put-attribute name="title" value="Reduction-guesthome" />
 		<put-attribute name="body" value="/WEB-INF/views/user/guest-home.jsp" />
 		<put-attribute name="paginator" value="/WEB-INF/tiles-base/paginator.jsp" />
 	</definition>
 	
 	<definition name="denied" extends="base.definition">
-		<put-attribute name="title" value="Project Name - Access Denied" />
+		<put-attribute name="title" value="Reduction - Access Denied" />
 		<put-attribute name="body" value="/WEB-INF/views/user/denied.jsp" />
 		<put-attribute name="header" value="" />
 		<put-attribute name="menu" value="" />
@@ -46,7 +46,7 @@
 	<definition name="custom.error" template="/WEB-INF/views/error-custom.jsp"/>
 	
 	<definition name="home" extends="base.definition">
-		<put-attribute name="title" expression="TEST: ${user.name}" />
+		<put-attribute name="title" expression="Reduction" />
 		<put-attribute name="body" value="/WEB-INF/views/user/home.jsp" />
 	    <put-attribute name="menu" value="/WEB-INF/tiles-base/menu.jsp" />
 	    <put-attribute name="paginator" value="/WEB-INF/tiles-base/paginator.jsp" />
