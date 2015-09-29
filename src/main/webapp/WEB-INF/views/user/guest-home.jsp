@@ -13,7 +13,10 @@
          <div class = "reviewtop"></div>
             <div class = "reviewcenter">
 
-             <a href="${links.nameLink }">reduction/${links.nameLink }</a>
+             <ul>
+             <a href="${links.nameLink }">reduction/${links.nameLink }</a>&nbsp;
+             Имя пользавателя: ${links.user.name}&nbsp;
+             </ul>
             </div>
           <div class = "reviewbottom"></div>
           </div>

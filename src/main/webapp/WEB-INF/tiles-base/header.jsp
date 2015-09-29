@@ -16,7 +16,7 @@
         <a href="<c:url value='/j_spring_security_logout' />">logout</a>
          </security:authorize> 
          <security:authorize access="isAnonymous()" >
-         Гость
+         Гость, <a href="<c:url value='/login' />">Войти</a>
           </security:authorize> 
          </div>
 		</div>

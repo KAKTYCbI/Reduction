@@ -56,7 +56,7 @@ public class LinkController {
         }
         link.setNameLink(tmp.toString());
 		linkService.saveLink(link);
-	    return "home";
+	    return "redirect:/home";
 	}
 
 	

@@ -143,7 +143,20 @@ public class LoginController {
 	public ModelAndView  getHome(@RequestParam(value = "page", required = false) Integer page,HttpSession session, Authentication auth){
 		ModelAndView mav = new ModelAndView();
 		UserPrincipal user = userService.getUserByName(auth.getName());
+		if(page==null) page = 1;
+		Integer pageSize = 3;
+		Integer startPage = page;
+		Integer endPage = page + 5;
+		Number size1 = linkService.getSizeLinkByUser(user);
+		int size = Integer.parseInt(size1.toString());
+		Integer lastPage = (size+(pageSize-1)) / pageSize;
+		if(endPage >= lastPage) endPage = lastPage;
+		if(endPage >= 5 && (endPage - startPage) < 5) startPage = endPage -5;
+		mav.addObject("page", page);
+		mav.addObject("startpage", startPage);
+		mav.addObject("endpage", endPage);
 		mav.addObject("user",user);
+		mav.addObject("links", linkService.getLinksByUser(user, (page-1)*pageSize,pageSize));
 		mav.setViewName("home");
 		return mav;
 	}

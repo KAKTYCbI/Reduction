@@ -8,12 +8,15 @@
 <h1>Главная</h1>
 </br>
  <div class="reviews">
-   <c:forEach items="${reviews}" var="reviews" >
+   <c:forEach items="${links}" var="links" >
       <div class = "review">
          <div class = "reviewtop"></div>
             <div class = "reviewcenter">
-
-             Добро пожаловать
+            <ul>
+             <a href="${links.nameLink }">reduction/${links.nameLink }</a>&nbsp;
+             Имя пользавателя: ${links.user.name}&nbsp;
+             Кликнули:${links.count}
+             </ul>
             </div>
           <div class = "reviewbottom"></div>
           </div>
