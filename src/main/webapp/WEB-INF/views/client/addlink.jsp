@@ -24,6 +24,24 @@
         </td>
         
       </tr>
+      <tr>
+        <td>
+          <form:label path = "information">Краткая информация:</form:label>
+        </td>
+        <td>
+          <form:input path="information"/>
+        </td>
+        
+      </tr>
+      <tr>
+        <td>
+          <form:label path = "tag">Теги(через запятую):</form:label>
+        </td>
+        <td>
+          <form:input path="tag"/>
+        </td>
+        
+      </tr>
      
       <tr>
         <td colspan="2"><input type="SUBMIT" value="Добавить ссылку"></td>

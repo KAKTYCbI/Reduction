@@ -25,6 +25,8 @@ DROP TABLE IF EXISTS `links`;
 CREATE TABLE `links` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `domain` varchar(100) NOT NULL,
+  `information` varchar(100) DEFAULT NULL,
+  `tag` varchar(100) DEFAULT NULL,
   `count` int(11) NOT NULL,
   `name_link` varchar(100) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -40,7 +42,7 @@ CREATE TABLE `links` (
 
 LOCK TABLES `links` WRITE;
 /*!40000 ALTER TABLE `links` DISABLE KEYS */;
-INSERT INTO `links` VALUES (26,'bulgakov.net',4,'12345',27),(28,'vk.com',1,'3326',27),(29,'mail.ru',0,'19695',27),(30,'s13.ru',1,'31988',27),(31,'ya.ru',1,'25968',27),(32,'yandex.ru',1,'15393',26),(33,'yandex.ru',1,'29651',26),(34,'itzone.by',1,'23111',26),(35,'goo.gl',1,'13278',26),(36,'facebook.com',1,'28826',27);
+INSERT INTO `links` VALUES (26,'bulgakov.net','','',4,'12345',27),(28,'vk.com','','',1,'3326',27),(29,'mail.ru','','',0,'19695',27),(30,'s13.ru','','',1,'31988',27),(31,'ya.ru','','',1,'25968',27),(32,'yandex.ru',1,'','','15393',26),(33,'yandex.ru','','',1,'29651',26),(34,'itzone.by','','',1,'23111',26),(35,'goo.gl','','',1,'13278',26),(36,'facebook.com','','',1,'28826',27);
 /*!40000 ALTER TABLE `links` ENABLE KEYS */;
 UNLOCK TABLES;
 

@@ -24,6 +24,12 @@ public class Link {
 	@Column(name = "domain")
 	private String domain;
 	
+	@Column(name = "tag")
+	private String tag;
+	
+	@Column(name = "information")
+	private String information;
+	
 	@Column(name = "count")
 	private Long count;
 	
@@ -72,6 +78,22 @@ public class Link {
 
 	public void setCount(Long count) {
 		this.count = count;
+	}
+
+	public String getTag() {
+		return tag;
+	}
+
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
+
+	public String getInformation() {
+		return information;
+	}
+
+	public void setInformation(String information) {
+		this.information = information;
 	}
     
 	
