@@ -1,5 +1,8 @@
 package com.instinctools.app.web;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -15,9 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
 import com.instinctools.domain.service.LinkService;
+import com.instinctools.domain.service.TagService;
 import com.instinctools.domain.service.UserService;
 import com.instinctools.model.Link;
+import com.instinctools.model.Tag;
 import com.instinctools.model.UserPrincipal;
 import com.instinctools.model.UserRole;
 
@@ -27,6 +33,9 @@ public class LoginController {
 
 	@Autowired
 	private LinkService linkService;
+	
+	@Autowired
+	private TagService tagService;
 	
 	@Autowired
 	private UserService userService;
@@ -49,7 +58,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = { "/guesthome" }, method = { RequestMethod.GET })
-	public ModelAndView guestHome(@RequestParam(value = "page", required = false) Integer page) {
+	public ModelAndView guestHome(@RequestParam(value = "page", required = false) Integer page, HttpSession session) {
 		ModelAndView mav = new ModelAndView();
 		if(page==null) page = 1;
 		Integer pageSize = 3;
@@ -81,6 +90,25 @@ public class LoginController {
 		{
 			return "redirect:/login";
 		}
+	}
+	
+	
+	@RequestMapping(value = { "/info/{x}" }, method = { RequestMethod.GET })
+	public String  infoLink(Model model, @PathVariable String x, HttpSession session) {
+		Link link = linkService.getLinkByLinkName(x);
+		model.addAttribute("link",link);
+        session.invalidate();
+	
+		return "infoguest";
+	}
+	
+	@RequestMapping(value = { "/search/{x}" }, method = { RequestMethod.GET })
+	public ModelAndView  searchLink(@PathVariable String x, @RequestParam(value = "page", required = false) Integer page) {
+		ModelAndView mav = new ModelAndView();
+		Tag tag = tagService.getByName(x);
+		mav.addObject("links",tag.getLinks());
+		mav.setViewName("searchguest");
+		return mav;
 	}
 	
 	@RequestMapping(value = { "/registration" }, method = { RequestMethod.POST })
@@ -135,7 +163,7 @@ public class LoginController {
 	}
 	@PreAuthorize("isFullyAuthenticated()") 
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
-	public ModelAndView  getHome(@RequestParam(value = "page", required = false) Integer page,HttpSession session, Authentication auth){
+	public ModelAndView  getHome(@RequestParam(value = "page", required = false) Integer page, HttpSession session, Authentication auth){
 		ModelAndView mav = new ModelAndView();
 		UserPrincipal user = userService.getUserByName(auth.getName());
 		if(page==null) page = 1;

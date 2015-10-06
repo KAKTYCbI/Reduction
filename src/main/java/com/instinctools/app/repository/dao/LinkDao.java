@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.instinctools.app.repository.base.GenericDao;
 import com.instinctools.model.Link;
+import com.instinctools.model.Tag;
 import com.instinctools.model.UserPrincipal;
 
 public interface LinkDao extends GenericDao<Link, Long>{
@@ -15,6 +16,10 @@ public interface LinkDao extends GenericDao<Link, Long>{
   List<Link> getLinksByUser(UserPrincipal user, Integer first, Integer max);
   
   Number getSizeLinkByUser(UserPrincipal user);
+  
+  List<Link> getLinksByTag(List<Tag> tag, Integer first, Integer max);
+  
+  Number getSizeLinkByTag(Tag tag);
   
   Number getSizeAllLink();
 }

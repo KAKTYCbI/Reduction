@@ -33,6 +33,40 @@
 		<put-attribute name="paginator" value="/WEB-INF/tiles-base/paginator.jsp" />
 	</definition>
 	
+	<definition name="infoguest" extends="base.definition">
+		<put-attribute name="title" value="Reduction-info" />
+		<put-attribute name="body" value="/WEB-INF/views/user/infoguest.jsp" />
+		 <put-attribute name="menu" value="/WEB-INF/tiles-base/menu.jsp" />
+		
+	</definition>
+	
+	<definition name="info" extends="base.definition">
+		<put-attribute name="title" value="Reduction-info" />
+		<put-attribute name="body" value="/WEB-INF/views/client/info.jsp" />
+		 <put-attribute name="menu" value="/WEB-INF/tiles-base/menu.jsp" />
+		
+	</definition>
+	
+	<definition name="search" extends="base.definition">
+		<put-attribute name="title" value="Reduction-info" />
+		<put-attribute name="body" value="/WEB-INF/views/client/search.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles-base/menu.jsp" />
+		
+	</definition>
+	
+	<definition name="update" extends="base.definition">
+		<put-attribute name="title" value="Reduction-info" />
+		<put-attribute name="body" value="/WEB-INF/views/client/update.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles-base/menu.jsp" />
+		
+	</definition>
+	
+	<definition name="searchguest" extends="base.definition">
+		<put-attribute name="title" value="Reduction-search" />
+		<put-attribute name="body" value="/WEB-INF/views/user/searchguest.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles-base/menu.jsp" />	
+	</definition>
+	
 	<definition name="denied" extends="base.definition">
 		<put-attribute name="title" value="Reduction - Access Denied" />
 		<put-attribute name="body" value="/WEB-INF/views/user/denied.jsp" />

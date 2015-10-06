@@ -27,6 +27,7 @@ public abstract class AbstractHibernateDao<T, PK extends Serializable> implement
 	protected Class<T> getGenericEntityClass() {
 		ParameterizedType parameterizedType = (ParameterizedType) getClass().getGenericSuperclass();
 		return (Class<T>) parameterizedType.getActualTypeArguments()[0];
+		
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -43,6 +44,7 @@ public abstract class AbstractHibernateDao<T, PK extends Serializable> implement
 
 	@Override
 	public void saveOrUpdate(T obj){
+		//getSession().clear();
 		getSession().saveOrUpdate(obj);
 	}
 

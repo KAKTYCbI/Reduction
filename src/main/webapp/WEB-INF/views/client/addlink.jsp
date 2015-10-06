@@ -13,7 +13,7 @@
          <div class = "top"></div>
             <div class = "center">
 <ul>
-            <form:form method = "post" action = "addlink" commandName = "link">
+   <form:form method = "post" action = "addlink" commandName = "link">
     <table>
       <tr>
         <td>
@@ -33,16 +33,15 @@
         </td>
         
       </tr>
-      <tr>
+       <tr>
         <td>
-          <form:label path = "tag">Теги(через запятую):</form:label>
+          <form:label path = "tag1">Теги(через запятую):</form:label>
         </td>
         <td>
-          <form:input path="tag"/>
+          <form:input path="tag1"/>
         </td>
         
       </tr>
-     
       <tr>
         <td colspan="2"><input type="SUBMIT" value="Добавить ссылку"></td>
       </tr>

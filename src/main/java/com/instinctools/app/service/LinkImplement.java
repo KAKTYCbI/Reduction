@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.instinctools.app.repository.dao.LinkDao;
 import com.instinctools.domain.service.LinkService;
 import com.instinctools.model.Link;
+import com.instinctools.model.Tag;
 import com.instinctools.model.UserPrincipal;
 
 @Service()
@@ -52,6 +53,18 @@ public class LinkImplement implements LinkService{
 	public Number getSizeLinkByUser(UserPrincipal user) {
 		
 		return linkRepository.getSizeLinkByUser(user);
+	}
+
+	@Override
+	public List<Link> getLinksByTag(Integer first, Integer max, List<Tag> tag) {
+		List<Link> links = linkRepository.getLinksByTag(tag, first, max);
+		return links;
+	}
+
+	@Override
+	public Number getSizeByTag(Tag tag) {
+		
+		return linkRepository.getSizeLinkByTag(tag);
 	}
 
 }

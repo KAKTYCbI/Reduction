@@ -16,6 +16,7 @@
              <ul>
              <a href="${links.nameLink }">reduction/${links.nameLink }</a>&nbsp;
              Имя пользователя: ${links.user.name}&nbsp;
+             <a href="info/${links.nameLink }">подробнее</a>&nbsp;
              </ul>
             </div>
           <div class = "bottom"></div>

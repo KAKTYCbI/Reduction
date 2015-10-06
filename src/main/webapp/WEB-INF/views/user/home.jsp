@@ -16,6 +16,7 @@
              <a href="${links.nameLink }">reduction/${links.nameLink }</a>&nbsp;
              Имя пользователя: ${links.user.name}&nbsp;
              Кликнули:${links.count}
+             <a href="client/info/${links.nameLink }">подробнее</a>&nbsp;
              </ul>
             </div>
           <div class = "bottom"></div>

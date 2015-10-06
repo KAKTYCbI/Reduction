@@ -3,6 +3,7 @@ package com.instinctools.domain.service;
 import java.util.List;
 
 import com.instinctools.model.Link;
+import com.instinctools.model.Tag;
 import com.instinctools.model.UserPrincipal;
 
 public interface LinkService {
@@ -19,4 +20,7 @@ public interface LinkService {
 	
 	Number getSizeAllLink();
 
+	List<Link> getLinksByTag(Integer first, Integer max, List<Tag> tag);
+	
+	Number getSizeByTag(Tag tag);
 }
