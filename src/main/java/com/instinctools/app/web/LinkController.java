@@ -147,10 +147,9 @@ public class LinkController {
         }
         link.setTags(tags1);
 		linkService.saveLink(link);    
-		model.addAttribute("link",link);
-        model.addAttribute("user", user);  
+		model.addAttribute("user", user);  
 	
-		return "update";
+		return "redirect:/home";
 	}
 	
 	@PreAuthorize("isFullyAuthenticated()")
