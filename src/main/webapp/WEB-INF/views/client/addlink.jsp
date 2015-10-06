@@ -35,7 +35,7 @@
       </tr>
        <tr>
         <td>
-          <form:label path = "tag1">Теги(через запятую):</form:label>
+          <form:label path = "tag1">Теги(через запятую "тег, тег1, тег2"):</form:label>
         </td>
         <td>
           <form:input path="tag1"/>

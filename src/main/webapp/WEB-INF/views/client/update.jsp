@@ -5,7 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
  <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/home.css"/>" />
-<h1>Добавление ссылки</h1>
+<h1>Обновление ссылки</h1>
 </br>
 <ul>
  <div class="borders">
@@ -35,7 +35,7 @@
       </tr>
        <tr>
         <td>
-          <form:label path = "tag1">Теги(через запятую):</form:label>
+          <form:label path = "tag1">Теги(через запятую "тег, тег1, тег2"):</form:label>
         </td>
         <td>
           <form:input path="tag1"/>
