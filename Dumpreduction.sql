@@ -42,7 +42,7 @@ CREATE TABLE `links` (
 
 LOCK TABLES `links` WRITE;
 /*!40000 ALTER TABLE `links` DISABLE KEYS */;
-INSERT INTO `links` VALUES (26,'bulgakov.net','','',4,'12345',27),(28,'vk.com','','',1,'3326',27),(29,'mail.ru','','',0,'19695',27),(30,'s13.ru','','',1,'31988',27),(31,'ya.ru','','',1,'25968',27),(32,'yandex.ru','1','',0,'15393',26),(33,'yandex.ru','','',1,'29651',26),(34,'itzone.by','','',1,'23111',26),(35,'goo.gl','','',1,'13278',26),(36,'facebook.com','','',1,'28826',27),(37,'av.by','auto','auto, rent',0,'30018',27),(38,'abw.by','auto','auto, shop',2,'22513',27),(39,'av.by','auto','shop',0,'18939',27);
+INSERT INTO `links` VALUES (26,'bulgakov.net','','',4,'12345',27),(28,'vk.com','','',1,'3326',27),(29,'mail.ru','','',0,'19695',27),(30,'s13.ru','','',1,'31988',27),(31,'ya.ru','','',1,'25968',27),(32,'yandex.ru','1','',0,'15393',26),(33,'yandex.ru','','',1,'29651',26),(34,'itzone.by','','',1,'23111',26),(35,'goo.gl','','',1,'13278',26),(36,'facebook.com','','',1,'28826',27),(37,'av.by','auto','auto, rent',0,'30018',27),(38,'abw.by','auto','auto, shop',2,'22513',27),(39,'av.by','auto','auto',0,'18939',27);
 /*!40000 ALTER TABLE `links` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +94,7 @@ CREATE TABLE `tags_has_links` (
 
 LOCK TABLES `tags_has_links` WRITE;
 /*!40000 ALTER TABLE `tags_has_links` DISABLE KEYS */;
-INSERT INTO `tags_has_links` VALUES (37,8),(38,8),(37,9),(38,10),(39,10);
+INSERT INTO `tags_has_links` VALUES (37,8),(38,8),(39,8),(37,9),(38,10);
 /*!40000 ALTER TABLE `tags_has_links` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,4 +137,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-06 13:12:59
+-- Dump completed on 2015-10-06 20:20:24
